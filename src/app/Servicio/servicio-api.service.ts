@@ -11,10 +11,7 @@ export class ServicioApiService {
   constructor(private httpclient: HttpClient) { 
     this.URI=`https://api.openweathermap.org/data/2.5/weather?APPID=2ebb8d634e6ad8b6841eb487bcd37103&id=`
   }
-  getclase(): Observable<any>{
-      return this.httpclient.get('api.openweathermap.org/data/2.5/weather?APPID=2ebb8d634e6ad8b6841eb487bcd37103')
-  }
-
+  
   getclima(codigo:string){
     return this.httpclient.get(`${this.URI}${codigo}`);
   }
